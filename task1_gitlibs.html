@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Библиотеки для работы с гит</title>
+    <style type="text/css">
+        th, td {border: 1px solid grey;}
+        table {border: 1px solid grey; border-collapse: collapse;}
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th></th>
+            <th>GitPython</th>
+            <th>pygit2</th>
+            <th>PyGithub</th>
+        </tr>
+        <tr>
+            <td>Stars<br>Forks<br>Последнее изменение</td>
+            <td>3,8К<br>809<br>28.11.2022</td>
+            <td>1,5К<br>359<br>10.12.2022</td>
+            <td>5,7K<br>1,6K<br>09.11.2022</td>
+        </tr>
+        <tr>
+            <td>Примечание</td>
+            <td>Высокоуровневая</td>
+            <td>Написана на C, низкоуровневая</td>
+            <td>Основана на API github</td>
+        </tr>
+        <tr>
+            <td>Подключение к публичному репозитарию</td>
+            <td>Да</td>
+            <td>Да</td>
+            <td>Да</td>
+        </tr>
+        <tr>
+            <td>Подключение через логин-пароль</td>
+            <td>Да.<br>url = 'https://{username}:{password}@github.com/{username}/{reponame}'<br>(см. https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)</td>
+            <td>Да.<br>credentials = pygit2.UserPass(userName, password)</td>
+            <td>Да<br>Github(username,password)</td>
+        </tr>
+        <tr>
+            <td>Подключение через ssh</td>
+            <td>Да. Исп.:<br>Git().custom_environment(GIT_SSH_COMMAND=git_ssh_cmd)</td>
+            <td>Да.<br>credentials = pygit2.Keypair(username, pubkey, privkey, passphrase)</td>
+            <td>Нет</td>
+        </tr>
+        <tr>
+            <td>Запись в архив</td>
+            <td>Да<br>Repo.archive()</td>
+            <td>Нет. Можно использовать библиотеку zipfile для архивирования</td>
+            <td>Нет. Можно использовать библиотеку zipfile для архивирования</td>
+        </tr>
+        <tr>
+            <td>Создание удаленного репозитария</td>
+            <td>Да</td>
+            <td>Да</td>
+            <td>Да</td>
+        </tr>
+        <tr>
+            <td>Пуш проекта в удаленный репозитарий</td>
+            <td>Да</td>
+            <td>Да</td>
+            <td>Да</td>
+        </tr>
+    </table>
+</body>
+</html>
